@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./App.css";
+import "./circle.css";
 
-function App() {
+function Circle() {
   const [circles, setCircles] = useState([]);
   const [count, setCount] = useState(0);
   const [isCountVisible, setIsCountVisible] = useState(false);
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Circle;
