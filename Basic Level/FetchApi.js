@@ -5,7 +5,8 @@ const FetchApi = () => {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((json) => setData(json));
+      .then((json) => setData(json))
+      .catch((error) => console.log("Error: ", error);
   }, []);
 
   const handleDeleteItem = (itemId) => {
@@ -25,8 +26,8 @@ const FetchApi = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
-            <tr>
+          {data.map((item, index) => (
+            <tr key={index}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.email}</td>
