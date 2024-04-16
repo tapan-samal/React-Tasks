@@ -6,7 +6,7 @@ const FetchApi = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((json) => setData(json))
-      .catch((error) => console.log("Error: ", error);
+      .catch((error) => console.log("Error: ", error));
   }, []);
 
   const handleDeleteItem = (itemId) => {
